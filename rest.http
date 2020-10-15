@@ -1,0 +1,24 @@
+@domain=http://localhost
+
+###
+
+GET {{domain}}/say
+Content-Type: application/json
+
+###
+
+POST {{domain}}/say/create
+Content-Type: application/json
+
+{
+  "content": "No Pain, No Gain"
+}
+
+###
+
+POST {{domain}}/say/remove
+Content-Type: application/json
+
+{
+  "sayId": 1
+}
