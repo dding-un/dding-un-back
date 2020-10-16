@@ -6,6 +6,7 @@ const logger = require('morgan')
 
 const sequelize = require('./models').sequelize
 
+const user = require('./api/user')
 const say = require('./api/say')
 
 const app = express()
@@ -17,6 +18,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 app
+  .post('/login', user.login)
+
   .post('/say/create', say.create)
   .get('/say', say.read)
   .post('/say/remove', say.remove)

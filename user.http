@@ -1,0 +1,11 @@
+@domain=http://localhost
+
+###
+
+POST {{domain}}/login
+Content-Type: application/json
+
+{
+  "uid": "uid3",
+  "pw": "pw2"
+}
